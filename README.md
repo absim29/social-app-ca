@@ -7,10 +7,10 @@ Project Homestead is a community for DIY enthusiasts who want to share their cre
 
 npm install
 
-# For development
+## For development
 
 npm run watch
 
-# To build
+## To build
 
 npm run build
