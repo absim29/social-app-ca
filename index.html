@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="dist/css/index.css" />
+    <script type="module" src="./scripts/registration.js"></script>
   </head>
   <body class="text-center bg-success">
     <header>
@@ -69,6 +70,7 @@
       <form
         action="profile"
         class="col-xs-12 col-sm-11 col-md-8 col-lg-7 col-xl-6 m-auto was-validated"
+        id="registration-form"
       >
         <h1 class="display-3 mb-3 fw-normal text-white">Welcome back</h1>
         <div class="form-floating">
@@ -97,11 +99,14 @@
           <div class="invalid-feedback">Password must be 8 characters.</div>
         </div>
         <button class="w-100 mt-3 btn btn-lg btn-warning" type="submit">
-          Continue
+          Login
         </button>
       </form>
 
-      <p class="mt-4 mb-3 text-white">Don't have an account? <u>Sign up</u></p>
+      <p class="mt-4 mb-3 text-white">
+        Don't have an account?
+        <a href="register/" class="text-white">SIGN UP</a>
+      </p>
       <div class="container">
         <hr class="text-white w-50 mx-auto" />
         <p class="mt-2 mb-3 text-white">OR</p>
