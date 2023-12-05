@@ -1,3 +1,5 @@
+Trello Board link: https://trello.com/b/MRXsH1D2/js2-ca
+
 # social-app-ca
 
 JS2 Course Assignment - Social App
