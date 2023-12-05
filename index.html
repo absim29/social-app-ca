@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="dist/css/index.css" />
-    <script type="module" src="./scripts/registration.js"></script>
+    <script type="module" src="/scripts/login.js"></script>
   </head>
   <body class="text-center bg-success">
     <header>
@@ -70,16 +70,18 @@
       <form
         action="profile"
         class="col-xs-12 col-sm-11 col-md-8 col-lg-7 col-xl-6 m-auto was-validated"
-        id="registration-form"
+        id="login-form"
       >
         <h1 class="display-3 mb-3 fw-normal text-white">Welcome back</h1>
         <div class="form-floating">
           <input
             type="email"
             class="form-control"
-            id="floatingInput"
+            name="floatingInput"
+            id="login-email"
             placeholder="name@example.com"
             required
+            value="bianca@mail.com"
           />
           <label for="floatingInput">Email address</label>
           <div class="valid-feedback">Valid.</div>
@@ -89,10 +91,12 @@
           <input
             type="password"
             class="form-control"
-            id="floatingPassword"
+            name="floatingPassword"
+            id="login-password"
             placeholder="Password"
             minlength="8"
             required
+            value="testing123"
           />
           <label for="floatingPassword">Password</label>
           <div class="valid-feedback">Valid.</div>

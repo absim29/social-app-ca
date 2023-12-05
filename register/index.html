@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/index.css" />
-    <script type="module" src="../scripts/registration.js"></script>
+    <script type="module" src="/scripts/registration.js"></script>
   </head>
   <body class="text-center bg-success">
     <header>
@@ -77,21 +77,25 @@
           <input
             type="text"
             class="form-control"
-            id="floatingInput"
+            name="floatingText"
+            id="reg-name"
             placeholder="First Name Last Name"
             required
+            value="bianca"
           />
-          <label for="floatingInput">Name</label>
+          <label for="floatingText">Name</label>
           <div class="valid-feedback">Valid.</div>
           <div class="invalid-feedback">Please enter your name.</div>
         </div>
-        <div class="form-floating">
+        <div class="form-floating mt-2">
           <input
             type="email"
             class="form-control"
-            id="floatingInput"
+            name="floatingInput"
+            id="reg-email"
             placeholder="name@example.com"
             required
+            value="bianca@mail.com"
           />
           <label for="floatingInput">Email address</label>
           <div class="valid-feedback">Valid.</div>
@@ -101,10 +105,12 @@
           <input
             type="password"
             class="form-control"
-            id="floatingPassword"
+            name="floatingPassword"
+            id="reg-password"
             placeholder="Password"
             minlength="8"
             required
+            value="testing123"
           />
           <label for="floatingPassword">Password</label>
           <div class="valid-feedback">Valid.</div>
