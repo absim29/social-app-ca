@@ -1,28 +1,36 @@
-import { LOGIN_API_URL } from "./constants.js";
+import { LOGIN_API_URL, POSTS_API_URL } from "./constants.js";
 import { fetchData } from "./fetchData.js";
+import { displayPosts } from "./utils/displayPosts.js";
+import { addToLocalStorage } from "./utils/localStorageUtil.js";
 
 const form = document.querySelector('#login-form');
-
 const email = document.querySelector('#login-email');
 const password = document.querySelector('#login-password');
 
-async function registerUser(user) {
-    const postBody = JSON.stringify(user);
-    const myData = await fetchData(LOGIN_API_URL, {
-        method: 'POST',
-        body: postBody,
-    });
-    console.log(myData);
+
+async function loginUser(user) {
+    try {
+        const postBody = JSON.stringify(user);
+        const userLoginData = await fetchData(LOGIN_API_URL, {
+            method: 'POST',
+            body: postBody,
+        }, false);
+        const token = userLoginData.accessToken;
+        addToLocalStorage('accessToken', token);
+        window.location.href = '../feed';
+    } catch (error) {
+        console.error('Error logging in');
+    }
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const userRegistrationDetails = {
-        name: name.value,
+    const userLoginDetails = {
         email: email.value,
         password: password.value,
     };
-    registerUser(userRegistrationDetails);
+    await loginUser(userLoginDetails);
+    displayPosts();
 })
 
 function main() {

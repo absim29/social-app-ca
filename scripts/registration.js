@@ -13,6 +13,7 @@ async function registerUser(user) {
         body: postBody,
     });
     console.log(myData);
+    window.location.href = '../';
 }
 
 form.addEventListener('submit', (event) => {
