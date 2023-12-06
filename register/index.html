@@ -81,7 +81,6 @@
             id="reg-name"
             placeholder="First Name Last Name"
             required
-            value="bianca"
           />
           <label for="floatingText">Name</label>
           <div class="valid-feedback">Valid.</div>
@@ -93,13 +92,14 @@
             class="form-control"
             name="floatingInput"
             id="reg-email"
-            placeholder="name@example.com"
+            placeholder="name@noroff.no name@stud.noroff.no"
             required
-            value="bianca@mail.com"
           />
           <label for="floatingInput">Email address</label>
           <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">Please enter a valid email.</div>
+          <div class="invalid-feedback">
+            Use a @noroff.no or @stud.noroff.no email to register.
+          </div>
         </div>
         <div class="form-floating mt-2">
           <input
@@ -110,7 +110,6 @@
             placeholder="Password"
             minlength="8"
             required
-            value="testing123"
           />
           <label for="floatingPassword">Password</label>
           <div class="valid-feedback">Valid.</div>
