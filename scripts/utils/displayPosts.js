@@ -1,11 +1,16 @@
-import { POSTS_API_URL } from "../constants.js";
-import { fetchData } from "../fetchData.js";
+import { generatePostHtml } from "./generateHtml.js";
 
-async function displayPosts() {
-    const posts = await fetchData(POSTS_API_URL, {
-        method: 'GET'
-    }, true);
-    console.log(posts);
+const postsContainer = document.querySelector('#posts-display');
+
+
+async function displayPosts(posts, filterCallback) {
+    postsContainer.textContent = '';
+
+    posts.filter(filterCallback).forEach(post => {
+        const currentPost = generatePostHtml(post);
+        postsContainer.appendChild(currentPost);
+    });
+
 }
 
 export { displayPosts };
