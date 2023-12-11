@@ -6,13 +6,14 @@ import { displayPosts } from "./utils/displayPosts.js";
 let posts = [];
 const searchInput = document.querySelector('#searchInput');
 
+
 searchInput.addEventListener('input', () => {
     displayPosts(posts, filerPostHandler);
 });
 
 function filerPostHandler(post) {
 
-    if (post.title.toLowerCase().startsWith(searchInput.value.toLowerCase().trim())) {
+    if (post.title.toLowerCase().match(searchInput.value.toLowerCase().trim())) {
         return true;
     }
 }
