@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/index.css" />
+    <script type="module" src="/scripts/posts-feed.js"></script>
   </head>
   <body class="text-center bg-success">
     <header>
@@ -73,10 +74,10 @@
           <input
             type="search"
             class="form-control"
-            id="floatingInput"
+            id="searchInput"
             placeholder="searchbar"
           />
-          <label for="floatingInput"
+          <label for="searchInput"
             >Search <i class="fa-solid fa-magnifying-glass"></i
           ></label>
         </div>
@@ -110,116 +111,83 @@
         </p>
       </div>
       <!--Post feed-->
-      <div class="container-fluid mx-auto" style="min-width: 300px">
-        <div class="row mb-3">
-          <div class="col-6">
-            <div class="card shadow-sm">
-              <img
-                src="/images/post-1.jpg"
-                alt="post 1"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="card-body bg-info">
-                <p class="card-text">12 October 2023</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <h2>Post 1</h2>
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share-nodes"></i>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-6">
-            <div class="card shadow-sm">
-              <img
-                src="/images/post-2.jpg"
-                alt="post 1"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="card-body bg-info">
-                <p class="card-text">12 October 2023</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <h2>Post 2</h2>
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share-nodes"></i>
-                </div>
-              </div>
+      <div class="container row" style="min-width: 300px" id="posts-display">
+        <div class="col-xs col-md-6 col-lg-4 col-xl-4 mb-2">
+          <div class="card shadow-sm">
+            <img
+              src="/images/post-1.jpg"
+              alt="post 1"
+              style="height: 150px; object-fit: cover"
+            />
+            <div class="card-body bg-info">
+              <h2>Post</h2>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Laudantium magni minima perferendis ex architecto nihil quo sunt
+                est exercitationem quis numquam commodi, suscipit earum, veniam
+                iure laborum eum eaque aspernatur.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="row mb-3">
-          <div class="col-6">
-            <div class="card shadow-sm">
-              <img
-                src="/images/post-3.jpg"
-                alt="post 1"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="card-body bg-info">
-                <p class="card-text">12 October 2023</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <h2>Post 3</h2>
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share-nodes"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="card shadow-sm">
-              <img
-                src="/images/post-1.jpg"
-                alt="post 1"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="card-body bg-info">
-                <p class="card-text">12 October 2023</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <h2>Post 4</h2>
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share-nodes"></i>
-                </div>
-              </div>
+        <div class="col-xs col-md-6 col-lg-4 col-xl-4 mb-2">
+          <div class="card shadow-sm">
+            <img
+              src="/images/post-1.jpg"
+              alt="post 1"
+              style="height: 150px; object-fit: cover"
+            />
+            <div class="card-body bg-info">
+              <h2>Post</h2>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Laudantium magni minima perferendis ex architecto nihil quo sunt
+                est exercitationem quis numquam commodi, suscipit earum, veniam
+                iure laborum eum eaque aspernatur.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="row mb-3">
-          <div class="col-6">
-            <div class="card shadow-sm">
-              <img
-                src="/images/post-2.jpg"
-                alt="post 1"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="card-body bg-info">
-                <p class="card-text">12 October 2023</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <h2>Post 5</h2>
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share-nodes"></i>
-                </div>
-              </div>
+        <div class="col-xs col-md-6 col-lg-4 col-xl-4 mb-2">
+          <div class="card shadow-sm">
+            <img
+              src="/images/post-1.jpg"
+              alt="post 1"
+              style="height: 150px; object-fit: cover"
+            />
+            <div class="card-body bg-info">
+              <h2>Post</h2>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Laudantium magni minima perferendis ex architecto nihil quo sunt
+                est exercitationem quis numquam commodi, suscipit earum, veniam
+                iure laborum eum eaque aspernatur.
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="col-6">
-            <div class="card shadow-sm">
-              <img
-                src="/images/post-3.jpg"
-                alt="post 1"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="card-body bg-info">
-                <p class="card-text">12 October 2023</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <h2>Post 6</h2>
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share-nodes"></i>
-                </div>
+        <div class="col-xs col-md-6 col-lg-4 col-xl-4 mb-2">
+          <div class="card shadow-sm">
+            <img
+              src="/images/post-1.jpg"
+              alt="post 1"
+              style="height: 150px; object-fit: cover"
+            />
+            <div class="card-body bg-info">
+              <h2>Post</h2>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Laudantium magni minima perferendis ex architecto nihil quo sunt
+                est exercitationem quis numquam commodi, suscipit earum, veniam
+                iure laborum eum eaque aspernatur.
+              </p>
+              <div class="d-flex justify-content-around">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share-nodes"></i>
               </div>
             </div>
           </div>
