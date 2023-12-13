@@ -43,7 +43,13 @@ function generatePostHtml(post) {
     const shareButton = document.createElement('i');
     shareButton.classList.add('fa-solid', 'fa-share-nodes');
 
-    buttons.append(likeButton, shareButton);
+    const editButton = document.createElement('i');
+    editButton.classList.add('fa-regular', 'fa-pen-to-square');
+    editButton.addEventListener('click', () => {
+        window.location.href = `/edit-post/?id=${post.id}`;
+    });
+
+    buttons.append(likeButton, shareButton, editButton);
 
     cardBody.append(titleElement, text, buttons);
 
