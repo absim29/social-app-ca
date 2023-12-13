@@ -1,6 +1,6 @@
 import { getFromLocalStorage } from "./utils/localStorageUtil.js";
 
-export async function fetchData(url, options = { method: 'POST' }, shouldUseAuth = false,) {
+export async function fetchData(url, options = { method: 'GET' }, shouldUseAuth = false,) {
     try {
         let fetchOptions = {
             ...options,
