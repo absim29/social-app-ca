@@ -1,7 +1,7 @@
 import { POSTS_API_URL } from "./constants.js";
 import { fetchData } from "./fetchData.js";
 
-const addPostForm = document.querySelector('#add-post-form');
+const postForm = document.querySelector('#post-form');
 
 const title = document.querySelector('#post-title');
 const body = document.querySelector('#post-body');
@@ -23,7 +23,7 @@ async function addNewPost() {
     console.log(response);
 }
 
-addPostForm.addEventListener('submit', async (event) => {
+postForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     addNewPost();
 });
