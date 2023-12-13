@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/index.css" />
-    <script type="module" src="/scripts/addPost.js"></script>
+    <script type="module" src="/scripts/editPost.js"></script>
   </head>
   <body class="text-center bg-success">
     <header>
@@ -36,6 +36,8 @@
               <a class="nav-link" href="/profile/">Profile</a>
 
               <a class="nav-link active" href="/feed/">Feed</a>
+
+              <a class="nav-link" href="/add-post/">New post +</a>
             </ul>
           </div>
         </div>
@@ -67,12 +69,12 @@
     </header>
 
     <main class="container w-75 m-auto p-4">
-      <!--Add post form-->
+      <!--Edit post form-->
       <form
         class="col-xs-12 col-sm-11 col-md-8 col-lg-7 col-xl-6 m-auto"
         id="post-form"
       >
-        <h1 class="display-3 mb-3 fw-normal text-white">New post</h1>
+        <h1 class="display-3 mb-3 fw-normal text-white">Edit your post</h1>
         <div class="form-floating">
           <input
             type="text"
@@ -116,7 +118,7 @@
           <label for="media">Media URL</label>
         </div>
         <button class="w-100 mt-3 btn btn-lg btn-warning" type="submit">
-          Add post +
+          Submit changes +
         </button>
       </form>
 
