@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/index.css" />
-    <!-- <script type="module" src="/scripts/addPost.js"></script> -->
+    <script type="module" src="/scripts/addPost.js"></script>
   </head>
   <body class="text-center bg-success">
     <header>
@@ -69,7 +69,6 @@
     <main class="container w-75 m-auto p-4">
       <!--Add post form-->
       <form
-        action="profile"
         class="col-xs-12 col-sm-11 col-md-8 col-lg-7 col-xl-6 m-auto"
         id="add-post-form"
       >
@@ -81,22 +80,24 @@
             name="floatingTitle"
             id="post-title"
             placeholder="Title"
+            required
           />
           <label for="floatingTitle">Title</label>
         </div>
         <div class="form-floating mt-2">
-          <input
-            type="email"
+          <textarea
+            type="text"
             class="form-control"
             name="floatingBody"
             id="post-body"
             placeholder="Your text here"
-          />
-          <label for="floatingBody">This is the body of the post</label>
+            required
+          ></textarea>
+          <label for="floatingBody">Write your text here</label>
         </div>
         <div class="form-floating mt-2">
           <input
-            type="password"
+            type="text"
             class="form-control"
             name="floatingTags"
             id="post-tags"
@@ -104,11 +105,15 @@
           />
           <label for="floatingTags">Tags</label>
         </div>
-        <div class="form-group text-white mt-3">
-          <label for="post-media" class="form-label" style="display: none"
-            >Upload media</label
-          >
-          <input type="file" class="form-control hidden" id="post-media" />
+        <div class="form-floating mt-2">
+          <input
+            type="url"
+            class="form-control"
+            name="media"
+            id="post-media"
+            placeholder="Media"
+          />
+          <label for="media">Media URL</label>
         </div>
         <button class="w-100 mt-3 btn btn-lg btn-warning" type="submit">
           Add post +
