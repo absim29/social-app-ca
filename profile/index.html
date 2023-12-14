@@ -11,6 +11,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/index.css" />
+    <script type="module" src="../scripts/profilePage.js"></script>
+    <script type="module" src="/scripts/utils/logout.js"></script>
   </head>
   <body class="text-center bg-success">
     <!--Navigation-->
@@ -29,7 +31,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="navbar-nav">
-            <a class="nav-link" href="/">Log out</a>
+            <a class="nav-link" href="/" id="logout-button">Log out</a>
 
             <a class="nav-link active" href="#">Profile</a>
 
@@ -95,8 +97,8 @@
     </header>
 
     <main class="container w-100 m-auto">
-      <div class="container w-100">
-        <div class="col-xs-12 col-sm-11 col-lg-8 col-xl-6 m-auto mt-4">
+      <div class="container w-100" id="posts-display">
+        <!-- <div class="col-xs-12 col-sm-11 col-lg-8 col-xl-6 m-auto mt-4">
           <div class="card shadow-sm">
             <img
               src="/images/post-1.jpg"
@@ -113,43 +115,7 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-11 col-lg-8 col-xl-6 m-auto mt-4">
-          <div class="card shadow-sm">
-            <img
-              src="/images/post-2.jpg"
-              alt="post 1"
-              height="150"
-              style="object-fit: cover"
-            />
-            <div class="card-body bg-info" style="height: 100px">
-              <p class="card-text">12 October 2023</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <h2>Post 2</h2>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-share-nodes"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-11 col-lg-8 col-xl-6 m-auto mt-4">
-          <div class="card shadow-sm">
-            <img
-              src="/images/post-3.jpg"
-              alt="post 1"
-              height="150"
-              style="object-fit: cover"
-            />
-            <div class="card-body bg-info" style="height: 100px">
-              <p class="card-text">12 October 2023</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <h2>Post 3</h2>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-share-nodes"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </main>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
