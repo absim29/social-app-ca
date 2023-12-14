@@ -30,7 +30,7 @@ async function editPost() {
 
 postForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    editPost();
+    await editPost();
 });
 
 function currentPostData(post) {

@@ -19,5 +19,5 @@ async function deletePost() {
 
 deleteButton.addEventListener('click', async (event) => {
     event.preventDefault();
-    deletePost();
+    await deletePost();
 });
