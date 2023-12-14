@@ -77,6 +77,8 @@
             id="reg-name"
             placeholder="First Name Last Name"
             required
+            pattern="^[\w]+$"
+            title="Username must only contain lowercase and uppercase letters, numbers and underscore (_). Example: My_User123"
           />
           <label for="floatingText">Name</label>
           <div class="valid-feedback">Valid.</div>
@@ -90,12 +92,12 @@
             id="reg-email"
             placeholder="name@noroff.no name@stud.noroff.no"
             required
+            pattern="^[\w\-.]+@(stud.)?noroff.no$"
+            title="Only @(stud.)noroff.no domains are allowed to register"
           />
           <label for="floatingInput">Email address</label>
           <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">
-            Use a @noroff.no or @stud.noroff.no email to register.
-          </div>
+          <div class="invalid-feedback">Enter a valid email to register.</div>
         </div>
         <div class="form-floating mt-2">
           <input
