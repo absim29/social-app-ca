@@ -25,6 +25,7 @@ async function addNewPost() {
 
 postForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    addNewPost();
+    await addNewPost();
+    window.location.href = '/feed';
 });
 
