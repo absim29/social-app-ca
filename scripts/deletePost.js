@@ -34,6 +34,10 @@ async function deletePost() {
  */
 deleteButton.addEventListener('click', async (event) => {
     event.preventDefault();
-    await deletePost();
-    window.location.href = '/feed';
+    try {
+        await deletePost();
+        window.location.href = '/feed';
+    } catch (error) {
+        document.querySelector('#error').innerHTML = '<div class="error">You do not have permission to delete this post (you are not the author).</div>';
+    }
 });

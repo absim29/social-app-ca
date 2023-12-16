@@ -47,8 +47,12 @@ async function editPost() {
  */
 postForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    await editPost();
-    window.location.href = '/feed';
+    try {
+        await editPost();
+        window.location.href = '/feed';
+    } catch (error) {
+        document.querySelector('#error').innerHTML = '<div class="error">You do not have permission to edit this post (you are not the author).</div>';
+    }
 });
 
 /**
