@@ -39,6 +39,7 @@ async function loginUser(user) {
         }, false);
         const token = userLoginData.accessToken;
         addToLocalStorage('accessToken', token);
+        addToLocalStorage('userEmail', userLoginData.email);
         window.location.href = '../feed';
     } catch (error) {
         document.querySelector('#error').innerHTML = '<div class="error">Wrong email or password</div>';
