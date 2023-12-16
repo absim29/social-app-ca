@@ -21,7 +21,12 @@ ifAuthor();
 
 export { ifAuthor };
 
-
+/**
+ * I Did not have enough time to implement this,
+ * but I was going to make a separate JS file to generate the single post HTML
+ * Then add the edit and delete buttons dinamically if the author
+ * of the post matched the current user.
+ */
 
 
 
