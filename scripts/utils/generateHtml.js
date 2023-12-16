@@ -19,6 +19,7 @@
  * document.getElementById('posts-display').appendChild(postElement);
  */
 
+
 function generatePostHtml(post) {
     const { title, body, media } = post;
 
@@ -60,8 +61,11 @@ function generatePostHtml(post) {
         }
     });
 
-    const shareButton = document.createElement('i');
-    shareButton.classList.add('fa-solid', 'fa-share-nodes');
+    const expandButton = document.createElement('i');
+    expandButton.classList.add('fa-solid', 'fa-expand');
+    expandButton.addEventListener('click', () => {
+        window.location.href = `/single-post/?id=${post.id}`;
+    });
 
     const editButton = document.createElement('i');
     editButton.classList.add('fa-regular', 'fa-pen-to-square');
@@ -69,7 +73,7 @@ function generatePostHtml(post) {
         window.location.href = `/edit-post/?id=${post.id}`;
     });
 
-    buttons.append(likeButton, shareButton, editButton);
+    buttons.append(likeButton, expandButton, editButton);
 
     cardBody.append(titleElement, text, buttons);
 
