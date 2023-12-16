@@ -25,5 +25,6 @@ export function getFromLocalStorage(key) {
  * Removes the item associated with the specified key from local storage.
  */
 export function removeFromLocalStorage() {
-    localStorage.removeItem(key, value);
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('userEmail');
 }

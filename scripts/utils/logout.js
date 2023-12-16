@@ -15,7 +15,6 @@ const logoutButton = document.querySelector('#logout-button');
  */
 
 logoutButton.addEventListener('click', () => {
-    removeFromLocalStorage('accessToken', token);
-    removeFromLocalStorage('userEmail', userLoginData.email);
+    removeFromLocalStorage();
     window.location.href = '/index.html';
 });
