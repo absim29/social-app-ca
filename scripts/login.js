@@ -32,8 +32,3 @@ form.addEventListener('submit', async (event) => {
     await loginUser(userLoginDetails);
     displayPosts();
 })
-
-function main() {
-    //
-}
-main();
