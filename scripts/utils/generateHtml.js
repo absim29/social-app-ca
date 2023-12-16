@@ -1,3 +1,23 @@
+/**
+ * Generates HTML markup for displaying a post.
+ *
+ * @function
+ * @param {Object} post - The post object containing title, body, and media information.
+ * @param {string} post.title - The title of the post.
+ * @param {string} post.body - The body/content of the post.
+ * @param {string} [post.media] - The URL of the media (image) associated with the post. Optional.
+ * @returns {HTMLDivElement} The HTML element representing the post.
+ *
+ * @example
+ * // Example usage:
+ * const post = {
+ *   title: 'Sample Post',
+ *   body: 'This is a sample post content.',
+ *   media: 'https://example.com/sample-image.jpg'
+ * };
+ * const postElement = generatePostHtml(post);
+ * document.getElementById('posts-display').appendChild(postElement);
+ */
 
 function generatePostHtml(post) {
     const { title, body, media } = post;

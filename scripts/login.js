@@ -7,6 +7,28 @@ const form = document.querySelector('#login-form');
 const email = document.querySelector('#login-email');
 const password = document.querySelector('#login-password');
 
+/**
+ * Logs in a user by sending a POST request to the login API endpoint.
+ *
+ * @async
+ * @function
+ * @param {Object} user - The user object containing login credentials.
+ * @param {string} user.email - The user's email.
+ * @param {string} user.password - The user's password.
+ * @returns {Promise<void>} A promise that resolves after a successful login.
+ *
+ * @throws {Error} Throws an error if the login API call is unsuccessful or if there's an issue with the response.
+ *
+ * @example
+ * // Example usage:
+ * const user = { email: 'user@example.com', password: 'password123' };
+ * try {
+ *   await loginUser(user);
+ *   console.log('User logged in successfully.');
+ * } catch (error) {
+ *   console.error('Error logging in:', error.message);
+ * }
+ */
 
 async function loginUser(user) {
     try {
@@ -23,6 +45,10 @@ async function loginUser(user) {
     }
 }
 
+/**
+ * Event listener function for the submission of the login form.
+ * Prevents the default form submission, logs in the user, and displays posts.
+ */
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const userLoginDetails = {

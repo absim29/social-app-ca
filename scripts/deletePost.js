@@ -4,6 +4,18 @@ import { singlePostId } from "./utils/getSinglePost.js";
 
 const deleteButton = document.querySelector('#delete-button');
 
+/**
+ * Deletes a post from the server using the post ID.
+ *
+ * @async
+ * @function
+ * @returns {Promise<void>} A promise that resolves when the post is successfully deleted.
+ *
+ * @example
+ * // Example usage:
+ * // Ensure that the singlePostId function is available and provides the post ID.
+ * await deletePost();
+ */
 
 async function deletePost() {
     const postId = singlePostId();
@@ -14,9 +26,12 @@ async function deletePost() {
         },
     }, true);
     console.log(response);
-
 }
 
+/**
+ * Event listener function for the click event on the delete button.
+ * Prevents the default behavior, deletes the post, and redirects to the feed page.
+ */
 deleteButton.addEventListener('click', async (event) => {
     event.preventDefault();
     await deletePost();

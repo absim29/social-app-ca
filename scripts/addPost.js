@@ -8,6 +8,19 @@ const body = document.querySelector('#post-body');
 const tags = document.querySelector('#post-tags');
 const media = document.querySelector('#post-media');
 
+/**
+ * Adds a new post by sending a POST request to the server.
+ *
+ * @async
+ * @function
+ * @returns {Promise<void>} A promise that resolves when the new post is successfully added.
+ *
+ * @example
+ * // Example usage:
+ * // Ensure that the HTML document contains elements with the IDs 'title', 'body', 'tags', and 'media'.
+ * // Also, ensure that POSTS_API_URL is a valid API endpoint.
+ * await addNewPost();
+ */
 
 async function addNewPost() {
     const post = {
@@ -23,6 +36,10 @@ async function addNewPost() {
     console.log(response);
 }
 
+/**
+ * Event listener function for the submission of the new post form.
+ * Prevents the default form submission, adds a new post, and redirects to the feed page.
+ */
 postForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     await addNewPost();

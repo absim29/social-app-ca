@@ -6,6 +6,29 @@ const name = document.querySelector('#reg-name');
 const email = document.querySelector('#reg-email');
 const password = document.querySelector('#reg-password');
 
+/**
+ * Registers a new user by sending a POST request to the register API endpoint.
+ *
+ * @async
+ * @function
+ * @param {Object} user - The user object containing registration details.
+ * @param {string} user.email - The user's email.
+ * @param {string} user.password - The user's password.
+ * @returns {Promise<void>} A promise that resolves after a successful user registration.
+ *
+ * @throws {Error} Throws an error if the registration API call is unsuccessful or if there's an issue with the response.
+ *
+ * @example
+ * // Example usage:
+ * const newUser = { email: 'newuser@example.com', password: 'newpassword123' };
+ * try {
+ *   await registerUser(newUser);
+ *   console.log('User registered successfully.');
+ * } catch (error) {
+ *   console.error('Error registering user:', error.message);
+ * }
+ */
+
 async function registerUser(user) {
     try {
         const postBody = JSON.stringify(user);
@@ -20,6 +43,10 @@ async function registerUser(user) {
     }
 }
 
+/**
+ * Event listener function for the submission of the registration form.
+ * Prevents the default form submission and registers a new user.
+ */
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const userRegistrationDetails = {
@@ -28,9 +55,4 @@ form.addEventListener('submit', (event) => {
         password: password.value,
     };
     registerUser(userRegistrationDetails);
-})
-
-function main() {
-    //
-}
-main();
+});
