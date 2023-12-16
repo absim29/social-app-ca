@@ -20,4 +20,5 @@ async function deletePost() {
 deleteButton.addEventListener('click', async (event) => {
     event.preventDefault();
     await deletePost();
+    window.location.href = '/feed';
 });

@@ -31,6 +31,7 @@ async function editPost() {
 postForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     await editPost();
+    window.location.href = '/feed';
 });
 
 function currentPostData(post) {
