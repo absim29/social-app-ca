@@ -21,3 +21,13 @@ h1 {
 a.nav-link {
     font-size: 25px;
 }
+
+.post-image {
+    height: 200px; 
+    object-fit: cover;
+}
+
+.card-body {
+    min-height: 200px;
+    max-height: fit-content;
+}
