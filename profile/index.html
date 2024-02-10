@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/index.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/scripts/utils/logout.js"></script>
   </head>
   <body class="text-center bg-success">
     <!--Navigation-->
@@ -29,11 +35,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="navbar-nav">
-            <a class="nav-link" href="/">Log out</a>
+            <a class="nav-link" href="/" id="logout-button">Log out</a>
 
             <a class="nav-link active" href="#">Profile</a>
 
             <a class="nav-link" href="/feed/">Feed</a>
+
+            <a class="nav-link" href="/add-post/">New post +</a>
           </ul>
         </div>
       </div>
@@ -81,7 +89,7 @@
           class="col position-absolute"
           style="margin-top: -75px; width: 100%"
         >
-          <a href="/social-app/index.html"
+          <a href="#"
             ><img
               src="/images/logo-dark.png"
               alt="logo"
@@ -92,58 +100,42 @@
       </div>
     </header>
 
-    <main class="container w-100 m-auto">
-      <div class="container w-100">
-        <div class="col-xs-12 col-sm-11 col-lg-8 col-xl-6 m-auto mt-4">
+    <main class="container w-100 m-auto p-4">
+      <div class="container row" style="min-width: 300px" id="posts-display">
+        <div class="col-xs col-md-6 col-lg-4 col-xl-4 mb-2">
           <div class="card shadow-sm">
             <img
-              src="/images/post-1.jpg"
-              alt="post 1"
-              height="150"
-              style="object-fit: cover"
+              class="post-image"
+              src="https://i.pinimg.com/736x/a5/dd/53/a5dd53b41360183d499f55967041801f.jpg"
+              alt="Christmas wishes"
             />
-            <div class="card-body bg-info" style="height: 100px">
-              <p class="card-text">12 October 2023</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <h2>Post 1</h2>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-share-nodes"></i>
+            <div class="card-body bg-info">
+              <h2>Christmas wishes</h2>
+              <p class="card-text">
+                May you all have a blessed Christmas and a Happy New Year!
+              </p>
+              <div class="d-flex justify-content-around">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i
+                ><i class="fa-solid fa-share-nodes" aria-hidden="true"></i
+                ><i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-11 col-lg-8 col-xl-6 m-auto mt-4">
+        <div class="col-xs col-md-6 col-lg-4 col-xl-4 mb-2">
           <div class="card shadow-sm">
             <img
-              src="/images/post-2.jpg"
-              alt="post 1"
-              height="150"
-              style="object-fit: cover"
+              class="post-image"
+              src="https://www.visitfinland.com/.imaging/mte/visit-finland-theme/xlUpW/dam/vf/Lapland/Finland_Aurora_dome_Jeris_Antti_Pietika-inen.12422788202013340987_optimized.jpg/jcr:content/Finland_Aurora_dome_Jeris_Antti_Pietik%C3%A4inen.12422788202013340987_optimized.jpg"
+              alt="Dreaming of a vacation"
             />
-            <div class="card-body bg-info" style="height: 100px">
-              <p class="card-text">12 October 2023</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <h2>Post 2</h2>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-share-nodes"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-11 col-lg-8 col-xl-6 m-auto mt-4">
-          <div class="card shadow-sm">
-            <img
-              src="/images/post-3.jpg"
-              alt="post 1"
-              height="150"
-              style="object-fit: cover"
-            />
-            <div class="card-body bg-info" style="height: 100px">
-              <p class="card-text">12 October 2023</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <h2>Post 3</h2>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-share-nodes"></i>
+            <div class="card-body bg-info">
+              <h2>Dreaming of a vacation</h2>
+              <p class="card-text">Somewhere I've never been before</p>
+              <div class="d-flex justify-content-around">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i
+                ><i class="fa-solid fa-share-nodes" aria-hidden="true"></i
+                ><i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
               </div>
             </div>
           </div>
